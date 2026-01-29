@@ -1,32 +1,16 @@
-# Terraform state files
+cat > .gitignore <<'EOF'
+.terraform/
 *.tfstate
 *.tfstate.*
-.terraform/
-
-# Terraform crash logs
+*.tfplan
 crash.log
-
-# Terraform variable files with secrets
-*.tfvars
-terraform.tfvars
-
-# OS files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
 .DS_Store
-Thumbs.db
-
-# Editor/IDE files
-*.swp
-*.swo
-.vscode/
 .idea/
-*.sublime-workspace
-*.sublime-project
-
-# Backup files
-*.bak
-*~
-
-# Python cache (if using any scripts)
-__pycache__/
-*.pyc
-
+.vscode/
+*.log
+EOF
